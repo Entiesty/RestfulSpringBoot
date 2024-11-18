@@ -4,6 +4,10 @@ spring:
       enabled: true
       additional-paths: src/main/java
       additional-exclude: static/
+  security:
+    user:
+      name: me
+      password: 123qwe
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/chapter11?useSSL=false&useUnicode=true&characterEncoding=UTF-8

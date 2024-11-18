@@ -97,4 +97,14 @@ public class UserController {
         }
         return UserConverter.poToVo(user);
     }
+
+    @PutMapping("/header")
+    public void updateUserByHeader(@RequestHeader("id") Long id,
+                                   @RequestBody UserVo userVo) {
+        User user = UserConverter.voToPo(userVo);
+        UpdateWrapper<User> userUpdateWrapper = new UpdateWrapper<>();
+        userUpdateWrapper.eq("id", id);
+
+        userService.update(user, userUpdateWrapper);
+    }
 }
