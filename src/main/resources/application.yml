@@ -1,0 +1,32 @@
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+      additional-exclude: static/
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/chapter11?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 147258
+  messages:
+    encoding: UTF-8
+    basename: international
+    cache-duration: 300s
+  mvc:
+    format:
+      date: yyyy-MM-dd
+      time: HH:mm:ss
+  servlet:
+    multipart:
+      location: D:/springboot
+      max-file-size: 5MB
+      max-request-size: 20MB
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  error:
+    include-message: always
